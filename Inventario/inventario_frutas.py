@@ -1,7 +1,7 @@
+import archivo_csv
+
 def menu():
-    lista_frutas = [
-    {"nombre": "Manzana", "precio": 10, "existencia": 25},
-    {"nombre": "Platano", "precio": 8, "existencia": 30},]
+    lista_frutas = archivo_csv.cargar_desde_archivo()
     
     while True:
         print("1.-Agregar")
