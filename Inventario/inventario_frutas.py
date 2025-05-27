@@ -45,6 +45,7 @@ def agregar_fruta(lista_frutas):
             "precio": p_fruta,
             "existencia": e_fruta})
             print("Fruta agregada")
+            archivo_csv.guardar_en_archivo(lista_frutas)
             return
 
 def encontrar_fruta(lista_frutas, fruta):

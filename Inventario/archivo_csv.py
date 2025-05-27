@@ -1,12 +1,12 @@
 # archivo_csv.py
-def guardar_en_archivo(lista_frutas, archivo="frutas.csv"):
+def guardar_en_archivo(lista_frutas, archivo="C:/Users/SysLap/Documents/Proyectos/Python/Inventario/csv/frutas.csv"):
     with open(archivo, "w", encoding="utf-8") as f:
         f.write("nombre,precio,existencia\n")
         for fruta in lista_frutas:
             linea = f"{fruta['nombre']},{fruta['precio']},{fruta['existencia']}\n"
             f.write(linea)
 
-def cargar_desde_archivo(archivo="frutas.csv"):
+def cargar_desde_archivo(archivo="C:/Users/SysLap/Documents/Proyectos/Python/Inventario/csv/frutas.csv"):
     lista = []
     try:
         with open(archivo, "r", encoding="utf-8") as f:
