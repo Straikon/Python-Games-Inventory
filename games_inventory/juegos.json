@@ -1,0 +1,44 @@
+[
+    {
+        "nombre": "DOOM (2016)",
+        "fecha": "2016-05-12",
+        "plataformas": [
+            "PC",
+            "Xbox One",
+            "PlayStation 4",
+            "Nintendo Switch"
+        ],
+        "generos": [
+            "Shooter",
+            "Action"
+        ]
+    },
+    {
+        "nombre": "Left 4 Dead",
+        "fecha": "2008-11-17",
+        "plataformas": [
+            "PC",
+            "macOS",
+            "Xbox 360"
+        ],
+        "generos": [
+            "Shooter",
+            "Action"
+        ]
+    },
+    [
+        {
+            "nombre": "Left 4 Dead",
+            "fecha": "2008-11-17",
+            "plataformas": [
+                "PC",
+                "macOS",
+                "Xbox 360"
+            ],
+            "generos": [
+                "Shooter",
+                "Action"
+            ]
+        }
+    ]
+]
