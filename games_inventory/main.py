@@ -19,5 +19,12 @@ def main():
         for j in juegos:
             print(f"- {j['nombre']} ({j['fecha']})")
 
+def mostrar():
+    nombre = input("Escribe el nombre del juego a buscar: ")
+    resultado = buscar_juego2(nombre)
+    for search in resultado:
+        print(f"Nombre: {search['nombre']}\nFecha lanzamiento: {search['fecha']}\nPlataformas: {search['plataformas']}\nGeneros: {search['generos']}")
+        print("--------------------------------------------------")
+
 if __name__ == "__main__":
-    main()
+    mostrar()

@@ -36,27 +36,27 @@ def buscar_juego(nombre):
         return {"error": f"Error en la API ({r.status_code})"}
 
 def buscar_juego2(nombre):
-#Estructura que arma el url con el que nos conectaremos a la API
     url = f"{URL_BASE}/games"
     params = {
         "key": API_KEY,
         "search": nombre,
-        "page_size": 1
+        "page": 1,
+        "page_size": 5
     }
-    r = requests.get(url, params=params) # Variable a la que se le asginara la url
-    if r.status_code == 200: # Condicional que hace una prueba para ver si la consulta fue correcta
-        datos = r.json() # Dentro de datos vamos a guardar el archivo Json que retorno la API
-        # Dentro del siguiente if vamos a obtener el resultado del juego que buscamos
-        if datos["results"]:
-            resultados = []
-            for juego in datos["results"]:
-                resultado = {
-                    "nombre": juego.get("name", "Desconocido"),
-                    "fecha": juego.get("released", "Desconocido"),
-                    "plataformas": [p["platform"]["name"] for p in juego.get("platforms", [])],
-                    "generos": [g["name"] for g in juego.get("genres", [])]
-                }
-                resultados.append(resultado)
+    r = requests.get(url, params=params)
+    
+    if r.status_code == 200:
+        data = r.json()
+        resultados = []
+        for juego in data.get("results", []):
+            info = {
+                "nombre": juego.get("name", "Desconocido"),
+                "fecha": juego.get("released", "Desconocido"),
+                "plataformas": [p["platform"]["name"] for p in juego.get("platforms", [])],
+                "generos": [g["name"] for g in juego.get("genres", [])]
+            }
+            resultados.append(info)
+        if resultados:
             return resultados
         else:
             return {"error": "No se encontró el juego"}
