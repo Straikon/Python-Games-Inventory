@@ -28,3 +28,5 @@ def mostrar():
 
 if __name__ == "__main__":
     mostrar()
+
+#ok, enserio olvido cosas basicas, osea puedo iterar como si fuera un diccionario por el for ya que esta recoerriendo los elementos de la lista y como cada elemento de la lisa es un diccionario por eso puedo puedo poner la busqueda de sese modo de lo contrario tendria que poner print(f"Nombre: resultados[search]["nombre"] o esto mal? y seria esultados[0]["nombre"] pero asi solo sacaria un resultado no? si quiciera iterar todos si o si es en un for y en vez de hacerlo por indicies como en lisa es mas facil manipularlo como diccionario cierto Eli? corrigeme si estoy mal
